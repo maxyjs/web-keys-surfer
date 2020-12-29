@@ -1,0 +1,1 @@
+# Navigate websites without using your mouse.

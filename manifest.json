@@ -1,0 +1,48 @@
+{
+   "name": "Web Keys Surfer",
+   "manifest_version": 2,
+   "author": "SokolovDADeveloper",
+   "permissions": [
+      "activeTab",
+      "tabs",
+      "background"
+   ],
+   "short_name": "Web Keys Surfer",
+   "version": "0.20",
+   "background": {
+      "scripts": [
+         "opener_background.js"
+      ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "icons/icon-16.png"
+      },
+      "default_title": "Web Keys Surfer"
+   },
+   "content_scripts":  [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "js": [
+            "lib/mousetrap.min.js"
+         ],
+         "run_at": "document_end"
+      },
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "js": [
+            "opener_cont_script.js"
+         ],
+         "run_at": "document_end"
+      }
+   ],
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+   }
+}
