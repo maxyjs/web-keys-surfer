@@ -66,8 +66,8 @@
         activatePattern: 'https\:\/\/github\.com\/search\?.*type\=repositories',
         iterableClass: 'iter1',
         SELECTORS: {
-          resultsContainerSelector: '#code_search_results',
-          resultElemSelector: '.code-list-item',
+          resultsContainerSelector: '.repo-list',
+          resultElemSelector: '.repo-list-item',
           resultLinkSelector: '.f4 > a'
         }
       },
