@@ -50,6 +50,17 @@
         }
       },
       {
+        name: 'ru_stackoverflowSearchOpener',
+        active: true,
+        activatePattern: 'https\:\/\/ru\.stackoverflow\.com\/search\?',
+        iterableClass: 'iter1',
+        SELECTORS: {
+          resultsContainerSelector: '.flush-left.js-search-results',
+          resultElemSelector: '.search-result',
+          resultLinkSelector: 'h3 > a'
+        }
+      },
+      {
         name: 'githubRepositoriesSearchOpener',
         active: true,
         activatePattern: 'https\:\/\/github\.com\/search\?.*type\=repositories',
