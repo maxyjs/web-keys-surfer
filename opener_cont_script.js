@@ -118,7 +118,7 @@ function opener_cont_script(extOptions) {
       const currentUrl = window.location.href
 
       for (const candidate of searchEnginesSettings) {
-        const regex = new RegExp(candidate.activatePattern, 'g')
+        const regex = new RegExp(candidate.activatePattern, 'gi')
         const match = regex.test(currentUrl)
 
         if (match && candidate.active) {
