@@ -93,6 +93,17 @@
           resultLinkSelector: '.g-user-content > a'
         }
       },
+      {
+        name: 'raindropSearchOpener',
+        active: true,
+        activatePattern: 'https\:\/\/app\.raindrop\.io\/my',
+        iterableClass: 'iter1',
+        SELECTORS: {
+          resultsContainerSelector: 'main:not(.svMain)',
+          resultElemSelector: '.height-2V2t',
+          resultLinkSelector: 'article > a'
+        }
+      },
     ]
   }
 
