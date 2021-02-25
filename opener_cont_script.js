@@ -173,6 +173,11 @@ function opener_cont_script(extOptions) {
           removeFirstResultElem(SELECTORS)
           return false;
         });
+
+        mt.bind('ctrl+shift+right', function (e) {
+          goToNextTab()
+          return false;
+        });
       }
 
       /***   Actions Search Pages  ***/
@@ -304,26 +309,27 @@ function opener_cont_script(extOptions) {
         });
       }
 
-      function closeTab() {
-        chrome.runtime.sendMessage(
-          {
-            command: 'closeTab',
-          },
-          () => {  }
-        );
-      }
+    }
 
-      function goToNextTab() {
-        chrome.runtime.sendMessage(
-          {
-            command: 'shiftTab',
-            payload: {
-              direction: "next"
-            }
-          },
-          () => {  }
-        );
-      }
+    function closeTab() {
+      chrome.runtime.sendMessage(
+        {
+          command: 'closeTab',
+        },
+        () => {  }
+      );
+    }
+
+    function goToNextTab() {
+      chrome.runtime.sendMessage(
+        {
+          command: 'shiftTab',
+          payload: {
+            direction: "next"
+          }
+        },
+        () => {  }
+      );
     }
 
     function getElementBySelector(selector, context) {
