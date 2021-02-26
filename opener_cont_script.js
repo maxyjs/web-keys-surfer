@@ -107,10 +107,24 @@
     ]
   }
 
-  try {
-    opener_cont_script(extOptions)
-  } catch (err) {
-    console.error(err)
+  const isDev = true
+
+  launch(extOptions)
+
+  function launch(extOptions) {
+    if (isDev !== true) {
+      opener_cont_script(extOptions)
+    } else {
+      try {
+        opener_cont_script(extOptions)
+      } catch (err) {
+        const message = `
+          Error [ opener_cont_script ]
+          ${err.message || ''}
+          `
+        alert(message)
+      }
+    }
   }
 })()
 
