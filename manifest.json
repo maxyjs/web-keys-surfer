@@ -11,6 +11,7 @@
    "version": "0.20",
    "background": {
       "scripts": [
+         "hot-reload.js",
          "opener_background.js"
       ]
    },
