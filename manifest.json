@@ -12,10 +12,10 @@
    "short_name": "Web Keys Surfer",
    "version": "1.0",
    "background": {
-      "page": "background.html",
       "scripts": [
          "hot-reload.js",
-         "opener_background.js"
+         "opener_background.js",
+         "closerBackground.js"
       ]
    },
    "browser_action": {
