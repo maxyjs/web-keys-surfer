@@ -3,13 +3,16 @@
    "manifest_version": 2,
    "author": "SokolovDADeveloper",
    "permissions": [
+      "<all_urls>",
+      "contextMenus",
       "activeTab",
       "tabs",
       "background"
    ],
    "short_name": "Web Keys Surfer",
-   "version": "0.20",
+   "version": "1.0",
    "background": {
+      "page": "background.html",
       "scripts": [
          "hot-reload.js",
          "opener_background.js"
