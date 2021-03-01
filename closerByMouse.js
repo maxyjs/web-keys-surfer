@@ -13,7 +13,6 @@ if (window.closerByMouse === undefined) {
       setTimeout( () => {
         if (counter) {
           counter--
-          console.log('\x1b[36m%s\x1b[0m', "counter = ", counter)
         }
       }, 500)
 
