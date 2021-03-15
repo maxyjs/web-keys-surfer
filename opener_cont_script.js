@@ -1,7 +1,7 @@
 ;(function start() {
 
   const extOptions = {
-    scrollByPx: 500,
+    scrollByPx: 1000,
     numOpenResults: 6,
     openLinksStartDelay: 3000,
     searchEnginesSettings: [
@@ -325,7 +325,7 @@ function setKeysUndefinedPages(extOptions) {
     });
 
     window.Mousetrap.bind('ctrl+down', function (e) {
-      window.scrollBy(0,scrollByPx);
+      window.scrollBy(0, scrollByPx);
       return false;
     });
 
