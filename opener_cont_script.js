@@ -8,18 +8,7 @@
       {
         name: 'googleSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/www\.google\.com\/search',
-        iterableClass: 'iter1',
-        SELECTORS: {
-          resultsContainerSelector: '#rcnt',
-          resultElemSelector: '.g',
-          resultLinkSelector: 'a',
-        }
-      },
-      {
-        name: 'googleSearchOpener',
-        active: true,
-        activatePattern: 'https\:\/\/www\.google\.ru\/search',
+        activatePattern: 'https://www.google.(ru|com)/search',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '#rcnt',
@@ -30,7 +19,7 @@
       {
         name: 'yandexSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/yandex\.ru\/search\/\?',
+        activatePattern: 'https://yandex.ru/search/?',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '#search-result',
@@ -41,7 +30,7 @@
       {
         name: 'youTubeSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/www\.youtube\.com\/results\?',
+        activatePattern: 'https://www.youtube.com/results?',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '#contents',
@@ -52,7 +41,7 @@
       {
         name: 'stackoverflowSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/stackoverflow\.com\/search\?',
+        activatePattern: 'https://stackoverflow.com/search?',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '.js-search-results > div',
@@ -63,7 +52,7 @@
       {
         name: 'ru_stackoverflowSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/ru\.stackoverflow\.com\/search\?',
+        activatePattern: 'https://ru.stackoverflow.com/search?',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '.flush-left.js-search-results',
@@ -74,7 +63,7 @@
       {
         name: 'githubRepositoriesSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/github\.com\/search\?.*type\=repositories',
+        activatePattern: 'https://github.com/search?.*type=repositories',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '.repo-list',
@@ -85,7 +74,7 @@
       {
         name: 'githubCodeSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/github\.com\/search\?.*type\=code',
+        activatePattern: 'https://github.com/search?.*type=code',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '.code-list',
@@ -96,7 +85,7 @@
       {
         name: 'hhVacancySearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/hh\.ru\/search\/vacancy',
+        activatePattern: 'https://hh.ru/search/vacancy',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: '.vacancy-serp',
@@ -107,7 +96,7 @@
       {
         name: 'raindropSearchOpener',
         active: true,
-        activatePattern: 'https\:\/\/app\.raindrop\.io\/my',
+        activatePattern: 'https://app.raindrop.io/my',
         iterableClass: 'iter1',
         SELECTORS: {
           resultsContainerSelector: 'main:not(.svMain)',
@@ -150,13 +139,12 @@ function opener_cont_script(extOptions) {
     const currentUrl = window.location.href
 
     for (const candidate of searchEnginesSettings) {
-      const regex = new RegExp(candidate.activatePattern, 'gi')
+      const regex = new RegExp(candidate.activatePattern, 'i')
       const match = regex.test(currentUrl)
 
       if (match && candidate.active) {
         return setKeysSearchEngines(candidate, extOptions)
       }
-
     }
 
     setKeysUndefinedPages(extOptions)
