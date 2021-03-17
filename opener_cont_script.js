@@ -17,6 +17,17 @@
         }
       },
       {
+        name: 'googleSearchOpener',
+        active: true,
+        activatePattern: 'https\:\/\/www\.google\.ru\/search',
+        iterableClass: 'iter1',
+        SELECTORS: {
+          resultsContainerSelector: '#rcnt',
+          resultElemSelector: '.g',
+          resultLinkSelector: 'a',
+        }
+      },
+      {
         name: 'yandexSearchOpener',
         active: true,
         activatePattern: 'https\:\/\/yandex\.ru\/search\/\?',
