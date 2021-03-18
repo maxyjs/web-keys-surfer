@@ -39,6 +39,17 @@
         }
       },
       {
+        name: 'youTubePlaylist',
+        active: true,
+        activatePattern: 'https://www.youtube.com/playlist?',
+        iterableClass: 'iter1',
+        SELECTORS: {
+          resultsContainerSelector: '#contents.style-scope.ytd-playlist-video-list-renderer',
+          resultElemSelector: 'ytd-playlist-video-renderer.style-scope.ytd-playlist-video-list-renderer',
+          resultLinkSelector: '#video-title'
+        }
+      },
+      {
         name: 'stackoverflowSearchOpener',
         active: true,
         activatePattern: 'https://stackoverflow.com/search?',
