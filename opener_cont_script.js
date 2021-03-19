@@ -11,7 +11,7 @@
         activatePattern: 'https://www.google.(ru|com)/search',
         iterableClass: 'iter1',
         SELECTORS: {
-          resultsContainerSelector: '#rcnt',
+          resultsContainerSelector: '#search',
           resultElemSelector: '.g',
           resultLinkSelector: 'a',
         }
